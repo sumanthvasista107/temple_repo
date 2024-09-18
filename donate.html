@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narasimha Swamy Temple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="./scripts.js"></script>
+    <link rel="stylesheet" href="./donate.css">
+    <link rel="icon" type="image/jpg" href="./images/image.png">
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo-holder">
+            <div class="logo">logo</div>
+            <div class="logo-text">Sri Lakshmi Narasimhaswamy Temple</div>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./index.html#rituals">Rituals</a>
+                </li>
+                <li>
+                    <a href="./index.html#services-offered">Services</a>
+                </li>
+                <li>
+                    <a href="./index.html#about">About us</a>
+                </li>
+                <li>
+                    <a href="/donate.html">Donate</a>
+                </li>
+                <li>
+                    <a href="./index.html#contact-us">Contact us</a>
+                </li>
+                
+            </ul>
+            <a href="javascript:void(0);" class="mobile-toggle"
+            onclick="toggleMobileMenu()">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                  </svg>
+            </a>
+        </nav>
+    </header>
+
+    <section class="donation-page">
+        <div class="donation-container">
+            <div class="form-and-bank">
+                <div class="donation-form-container">
+                    <h2>Support Our Temple</h2>
+                    <p>Your donations help us maintain the temple and support our community activities.</p>
+                    <form id="donation-form" action="/process_donation" method="POST" class="donation-form">
+                        <label for="amount">Donation Amount:</label>
+                        <input type="number" id="amount" name="amount" placeholder="Enter amount in INR" required>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <!-- Payment method selection (optional) -->
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="debit-card">Debit Card</option>
+                            <option value="net-banking">Net Banking</option>
+                            <option value="upi">UPI</option>
+                        </select>
+
+                        <button type="submit" class="donate-button">Donate Now</button>
+                    </form>
+                </div>
+
+                <div class="bank-transfer">
+                    <h2>Donate via Bank Transfer</h2>
+                    <p>If you prefer to donate directly to our bank account, please use the following details:</p>
+                    <ul>
+                        <li><strong>Bank Name:</strong> XYZ Bank</li>
+                        <li><strong>Account Number:</strong> 1234567890</li>
+                        <li><strong>IFSC Code:</strong> XYZ1234</li>
+                        <li><strong>Account Holder:</strong> Narasimha Swamy Temple</li>
+                        <li><strong>UPI payment:</strong> </li>
+                        <li><img src="./images/sample_qr_code.png" alt="UPI QR Code" class="upi-qr-code"></li>
+                    </ul>
+                    <p>After making the transfer, please email us at <a href="mailto:donate@example.com">donate@example.com</a> 
+                       or call/message us at <a href="tel:+91 7829541631"> +91 7829541631</a> with your transaction details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Narasimha Swamy Temple. All rights reserved.</p>
+    </footer>
+</body>
+</html>

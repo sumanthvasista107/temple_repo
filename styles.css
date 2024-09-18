@@ -1,0 +1,680 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --base : #555;
+    --base-100: #f1f1f1;
+    --base-400: #555;
+    --base-800: #000;
+    --yellow: #ffda4b;
+    --yellow-100: #fae57b;
+    --yellow-400: #ffda4b;
+    --yellow-800: #8b6f00;
+    --blue: #0a61ae;
+    --blue-100: #e2f8ff;
+    --blue-400: #61dafb;
+    --blue-800: #0a61ae;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+header {
+    position: sticky;
+    padding: 10px 20px;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+
+    .logo-holder{
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        font-weight: 600;
+        color: var(--base-800);
+
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            background-color: var(--base-800);
+            color: var(--base-100);
+            height: 64px;
+            width: 64px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        .logo-text{
+            flex: 1;
+
+        }
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap:5px;
+            li {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    color: var(--base);
+                    &:hover{
+                        background-color: var(--base-100);
+                        border-radius: 10px;
+                        text-decoration: none;
+                    }
+
+                }
+            }
+        }
+        .mobile-toggle{
+            display: none;
+            color: var(--base-800);
+            padding: 10px;
+            @media (max-width:768px){
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+		flex-direction:column;
+		align-items:center;
+	}
+
+    @media (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+
+        nav {
+            margin-top: 10px;
+            width: 100%;
+            ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                a {
+                    width: 100%;
+                    padding: 10px 0;
+                }
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+}
+
+section {
+    padding-top: 20px;
+	max-width:1440px;
+	margin:auto;
+	gap:30px;
+	margin-top:30px;
+	margin-bottom:30px;
+
+	@media (max-width:1440px){
+		padding-left:30px;
+		padding-right:30px;
+	}
+
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @media (max-width:1440px){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--blue);
+    color: var(--base-100);
+    border-radius: 10px;
+    transition: ease 0.3s all;
+    &:hover {
+        text-decoration: none;
+        background-color: var(--base-800);
+    }
+    &.white {
+        background-color: white;
+        color: var(--base-800);
+        &:hover {
+            background-color: var(--base-100);
+            color: var(--blue);
+        }
+    }
+    &.black {
+        background-color: black;
+        color: white;
+        &:hover {
+            background-color: var(--base);
+            color: var(--base-100);
+        }
+    }
+
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 10px;
+    small {
+        display: block;
+        font-weight: 100;
+    }
+
+    @media (max-width:768px){
+        font-size: 2rem;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    position: relative;
+    padding: 2em 1em;
+    color: var(--base-800);
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--base-400); /* Adjust opacity for fading effect */
+    z-index: 1;
+}
+
+
+.hero {
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+    background: url('./images/pexels-mayur-rawte-1583244.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--base-800);
+    padding: 2em 0;
+    z-index: 2;
+    @media (max-width:768px){
+        flex-direction: column;
+        padding: 1.5em 0;
+        
+    }
+    .hero-blue{
+        flex: 1;
+        background-color: var(--base-100);
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            margin-bottom: 10px;
+        }
+        span {
+            @media (max-width:768px) {
+                display: none;
+            }                
+        }
+        .call-to-action {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            a{
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        .socal-links{
+            a {
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .hero-yellow{
+        flex: 1;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img{
+            border-radius: 30px;
+            max-width: 60%;
+        }
+        
+    }
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    small {
+        display: block;
+        font-weight: 100;
+        font-size: 0.5cm;
+        color:var(--base);
+    }
+    @media  (max-width:768px) {
+        font-size: 2rem;
+    }
+}
+
+.temple-rituals {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    padding: 2em;
+    border-radius: 10px;
+    margin-top: 2em;
+    .rituals {
+        display: flex;
+        gap: 30px;
+        @media(max-width:1024px){
+            flex-direction: column;
+        }
+        article {
+            background-color: var(--yellow-100);
+            padding:30px;
+            border-radius: 30px;
+            flex: 1;
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            figure {
+                width: 100%;
+                padding-top: 56.25%;
+                overflow: hidden;
+                position: relative;
+                border-radius: 30px;
+                img {
+                    position: absolute;
+                    border-radius: 20px;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: ease 2s all;
+                }
+                figcaption {
+                    position:absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0,0,0,0.5);
+                    color: var(--base-100);
+                    padding: 10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: ease 0.3s all;
+                }
+
+                &:hover {
+                    figcaption {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    img {
+                        transform: scale(1.2);
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.services-offered {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    padding: 2em;
+    border-radius: 10px;
+    margin-top: 2em;
+    .Astrology {
+        display: flex;
+        gap: 30px;
+        @media(max-width:1024px){
+            flex-direction: column;
+        }
+        article {
+            background-color: var(--blue-100);
+            padding:30px;
+            border-radius: 30px;
+            flex: 1;
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            figure {
+                width: 100%;
+                padding-top: 56.25%;
+                overflow: hidden;
+                position: relative;
+                border-radius: 30px;
+                img {
+                    position: absolute;
+                    border-radius: 20px;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: ease 2s all;
+                }
+                figcaption {
+                    position:absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0,0,0,0.5);
+                    color: var(--base-100);
+                    padding: 10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: ease 0.3s all;
+                }
+
+                &:hover {
+                    figcaption {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-us {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    padding: 2em;
+    border-radius: 10px;
+    margin-top: 2em;
+    .holder-about {
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        @media (max-width:1024px){
+            flex-direction: column;
+        }
+        .left-column {
+            margin-bottom: 10px;
+            flex: 1;
+            
+            h4 {
+                margin-bottom: 20px;
+            }
+            ul {
+                list-style: none;
+                gap: 10px;
+                margin-right: 100px;
+                li {
+                    display: inline-block;
+                    background-color: var(--blue-400);
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .right-column {
+            flex: 1;
+            h4 {
+                margin-bottom: 20px;
+            }
+            p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+}
+
+.contact-us {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    padding: 2em;
+    border-radius: 10px;
+    margin-top: 2em;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--base-100);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2, .contact-info h2 {
+    margin-bottom: 20px;
+    color: var(--base-800);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--base-800);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--base-400);
+    border-radius: 5px;
+    background-color: var(--base-100);
+    color: var(--base-800);
+}
+
+
+.button:hover {
+    background-color: var(--base-800);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: var(--base-800);
+}
+
+@media (max-width: 768px) {
+    .contact-us {
+        flex-direction: column;
+    }
+}
+
+#thankYouModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#thankYouModal p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+#closeModal {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeModal:hover {
+    background-color: #0056b3;
+}
+
+.temple-rituals-button{
+    margin-top: 20px;
+    text-align: center;
+}
+.t_r_btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--blue);
+    color: var(--base-100);
+    border-radius: 10px;
+    transition: ease 0.3s all;
+    &:hover {
+        text-decoration: none;
+        background-color: var(--base-800);
+    }
+    &.white {
+        background-color: white;
+        color: var(--base-800);
+        &:hover {
+            background-color: var(--base-100);
+            color: var(--blue);
+        }
+    }
+    &.black {
+        background-color: black;
+        color: white;
+        &:hover {
+            background-color: var(--base);
+            color: var(--base-100);
+        }
+    }
+}
+
+.services-offered-button {
+    margin-top: 20px;
+    text-align: center;
+}
+.s_r_btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--blue);
+    color: var(--base-100);
+    border-radius: 10px;
+    transition: ease 0.3s all;
+    &:hover {
+        text-decoration: none;
+        background-color: var(--base-800);
+    }
+    &.white {
+        background-color: white;
+        color: var(--base-800);
+        &:hover {
+            background-color: var(--base-100);
+            color: var(--blue);
+        }
+    }
+    &.black {
+        background-color: black;
+        color: white;
+        &:hover {
+            background-color: var(--base);
+            color: var(--base-100);
+        }
+    }
+}
+
+footer {
+    background-color: var(--base-400);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
