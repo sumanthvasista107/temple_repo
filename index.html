@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts.js"></script>
     <link rel="icon" type="image/jpg" href="./images/image.png">
 </head>
@@ -23,16 +27,13 @@
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#rituals">Rituals</a>
-                </li>
-                <li>
-                    <a href="#services-offered">Services</a>
+                    <a href="#Rituals-Services">Rituals & Services</a>
                 </li>
                 <li>
                     <a href="#about">About us</a>
                 </li>
                 <li>
-                    <a href="./donate.html">Donate</a>
+                    <a href="./donate.html" class="tranistion-link">Donate</a>
                 </li>
                 <li>
                     <a href="#contact-us">Contact us</a>
@@ -48,7 +49,6 @@
         </nav>
     </header>
 
-    
     <main>
         <section class="hero container" id = "home">
             <div class="hero-blue">
@@ -81,120 +81,121 @@
                 alt="venkateshwara_without_bg" width="100%"/>
             </div>
         </section>
-        <section class="temple-rituals container" id="rituals">
-            <h2><small>Temple</small>
-                Rituals
-            </h2>
-            <div class="rituals">
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./images/temple_rituals.jpg" 
-                            alt="Abhishekam 1 -"
-                            width="100%"/>
-                            <figcaption>
-                                Abhishekam
-                            </figcaption>
+        <section class="swiper-container" id = "Rituals-Services">
+            <div class="swiper-wrapper">
+                <!-- Combined Slide -->
+                <div class="swiper-slide">
+                    <section class="temple-rituals container">
+                        <h2><small>Temple</small> Rituals</h2>
+                        <div class="rituals">
+                            <article>
+                                <figure>
+                                    <div>
+                                        <img src="./images/temple_rituals.jpg" 
+                                        alt="Abhishekam 1 -"
+                                        width="100%"/>
+                                        <figcaption>Abhishekam</figcaption>
+                                    </div>
+                                </figure>
+                                <h3>Abhishekam</h3>
+                                <p>A sacred ritual where the deity is bathed with 
+                                    holy substances like water, milk, and honey, 
+                                    symbolizing purification and devotion.</p>
+                            </article>
+                            <article>
+                                <figure>
+                                    <div>
+                                        <img src="./images/temple_rituals.jpg" 
+                                        alt="Archana 2 -"
+                                        width="100%"/>
+                                        <figcaption>Archana</figcaption>
+                                    </div>
+                                </figure>
+                                <h3>Archana</h3>
+                                <p>A personalized offering of flowers, fruits, and prayers, 
+                                    where the devotee's name and wishes are 
+                                    chanted in the deity's presence.</p>
+                            </article>
+                            <article>
+                                <figure>
+                                    <div>
+                                        <img src="./images/temple_rituals.jpg" 
+                                        alt="Aarti 3 -"
+                                        width="100%"/>
+                                        <figcaption>Aarti</figcaption>
+                                    </div>
+                                </figure>
+                                <h3>Aarti</h3>
+                                <p>A devotional ritual where lit lamps are waved in a circular motion before the deity, 
+                                    symbolizing the removal of 
+                                    darkness and the spreading of divine light.</p>
+                            </article>
                         </div>
-                    </figure>
-                    <h3>Abhishekam</h3>
-                    <p>A sacred ritual where the deity is bathed with 
-                        holy substances like water, milk, and honey, 
-                        symbolizing purification and devotion.</p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./images/temple_rituals.jpg" 
-                            alt="Archana 2 -"
-                            width="100%"/>
-                            <figcaption>
-                                Archana
-                            </figcaption>
+                        <div class="temple-rituals-button">
+                            <a href="./temple_rituals.html" class="t_r_btn">Learn More About Rituals</a>
                         </div>
-                    </figure>
-                    <h3>Archana</h3>
-                    <p>A personalized offering of flowers, fruits, and prayers, 
-                        where the devotee's name and wishes are 
-                        chanted in the deity's presence.</p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./images/temple_rituals.jpg" 
-                            alt="Aarti 3 -"
-                            width="100%"/>
-                            <figcaption>
-                                Arati
-                            </figcaption>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="services-offered container">
+                        <h2><small>Astrology and</small> Horoscope Services</h2>
+                        <div class="Astrology">
+                            <article>
+                                <figure>
+                                    <div>
+                                        <img src="./images/priest_astrology.jpg" 
+                                        alt="Horoscope Reading 1 -"
+                                        width="100%"/>
+                                        <figcaption>Horoscope Reading</figcaption>
+                                    </div>
+                                </figure>
+                                <h3>Horoscope Reading</h3>
+                                <p>A detailed reading of the individual’s birth chart 
+                                    (Janam Kundali) to understand their 
+                                    life path, strengths, challenges, and potential.</p>
+                            </article>
+                            <article>
+                                <figure>
+                                    <div>
+                                        <img src="./images/priest_astrology.jpg" 
+                                        alt="Horoscope Matching 1 -"
+                                        width="100%"/>
+                                        <figcaption>Horoscope Matching</figcaption>
+                                    </div>
+                                </figure>
+                                <h3>Horoscope Matching</h3>
+                                <p>Horoscope matching for potential marriages, 
+                                    focusing on compatibility in areas
+                                    like health, prosperity, progeny, and overall harmony.</p>
+                            </article>
+                            <article>
+                                <figure>
+                                    <div>
+                                        <img src="./images/priest_astrology.jpg" 
+                                        alt="Remedial Measures 1 -"
+                                        width="100%"/>
+                                        <figcaption>Remedial Measures</figcaption>
+                                    </div>
+                                </figure>
+                                <h3>Remedial Measures</h3>
+                                <p>Gemstone Recommendation, Poojas and Yagnas, Mantra Chanting</p>
+                            </article>
                         </div>
-                    </figure>
-                    <h3>Aarti</h3>
-                    <p>A devotional ritual where lit lamps are waved in a circular motion before the deity, 
-                        symbolizing the removal of 
-                        darkness and the spreading of divine light.</p>
-                </article>
+                        <div class="services-offered-button">
+                            <a href="./services_offered.html" class="s_r_btn">More about Services</a>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="temple-rituals-button">
-                <a href="./temple_rituals.html" class="t_r_btn">Learn More About Rituals</a>
-            </div>
+            
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </section>
-        <section class="services-offered container" id="services-offered">
-            <h2><small>Astrology and</small>
-                Horoscope Services
-            </h2>
-            <div class="Astrology">
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./images/priest_astrology.jpg" 
-                            alt="Horoscope Reading 1 -"
-                            width="100%"/>
-                            <figcaption>
-                                Horoscope Reading
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Horoscope Reading</h3>
-                    <p>A detailed reading of the individual’s birth chart 
-                        (Janam Kundali) to understand their 
-                        life path, strengths, challenges, and potential.</p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./images/priest_astrology.jpg" 
-                            alt="Horoscope Matching 1 -"
-                            width="100%"/>
-                            <figcaption>
-                                Horoscope Matching
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Horoscope Matching</h3>
-                    <p>Horoscope matching for potential marriages, 
-                        focusing on compatibility in areas
-                        like health, prosperity, progeny, and overall harmony.</p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./images/priest_astrology.jpg" 
-                            alt="Remedial Measures 1 -"
-                            width="100%"/>
-                            <figcaption>
-                                Remedial Measures
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Remedial Measures</h3>
-                    <p>Gemstone Recommendation, Poojas and Yagnas,Mantra Chanting</p>
-                </article>
-            </div>
-            <div class="services-offered-button">
-                <a href="./services_offered.html" class="s_r_btn">More about Services</a>
-            </div>
-        </section>
+       
         <section class="about-us container" id="about">
             <h2>
                 About Us
@@ -270,9 +271,13 @@
         </section>
         <script src="./scripts.js"></script>
     </main>
+
     
+
     <footer>
         <p>&copy; 2024 Narasimha Swamy Temple. All rights reserved.</p>
+        <p>Designed and Developed By: <a href="https://www.vasistatech.in/" class="footer-link">Vasista Tech Pvt Ltd</a></p>
     </footer>
+    
 </body>
 </html>

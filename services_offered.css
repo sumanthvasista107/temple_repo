@@ -147,4 +147,18 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 16px; /* Ensure text is readable */
+}
+
+.footer-link {
+    color: #f0f0f0; 
+    font-weight: bold; 
+    text-decoration: none; 
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.footer-link:hover {
+    color: #d0d0d0; 
+    text-decoration: none;
+    border-bottom: 1px solid #d0d0d0; 
 }

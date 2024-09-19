@@ -661,6 +661,45 @@ h2 {
     }
 }
 
+.page-transition-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-transition-wrapper.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+    background: #f8f9fa; /* Single background color */
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #333;
+}
+
+.swiper-pagination-bullet {
+    background: #333;
+}
+
+
 footer {
     background-color: var(--base-400);
     color: white;
@@ -669,6 +708,20 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 16px; /* Ensure text is readable */
+}
+
+.footer-link {
+    color: #f0f0f0; 
+    font-weight: bold; 
+    text-decoration: none; 
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.footer-link:hover {
+    color: #d0d0d0; 
+    text-decoration: none;
+    border-bottom: 1px solid #d0d0d0; 
 }
 
 

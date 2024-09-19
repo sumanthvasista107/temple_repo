@@ -82,5 +82,31 @@ document.getElementById('closeModal').addEventListener('click', function() {
     document.getElementById('thankYouModal').style.display = 'none';
 });
 
+document.querySelectorAll('.transition-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 500); // Match this timeout to the CSS animation duration
+    });
+});
+
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+
+
 
 
