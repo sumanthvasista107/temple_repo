@@ -138,6 +138,69 @@ header{
     }
 }
 
+h1, h2, h3 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.ritual-container {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ritual-container h2 {
+    text-align: center;
+    margin: 15px 0;
+    color: #1abc9c;
+    font-size: 24px;
+}
+
+.ritual-container p {
+    text-align: justify;
+    font-size: 16px;
+    color: #555;
+    padding: 10px 20px;
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    .ritual-container {
+        padding: 1rem;
+    }
+
+    .ritual-container h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Image Size for Smallest Devices */
+    .ritual-container img {
+        width: 100%; /* Full width on smallest devices for better display */
+    }
+}
+
+/* Adjust Image Size to 50% */
+.ritual-container img {
+    display: block;
+    margin: 10px auto;
+    width: 50%; /* Adjusted to 50% for smaller image size */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 footer {
     background-color: var(--base-400);
     color: white;

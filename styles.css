@@ -661,23 +661,7 @@ h2 {
     }
 }
 
-.page-transition-wrapper {
-    position: relative;
-    overflow: hidden;
-}
 
-.page-transition-wrapper.fade-out {
-    animation: fadeOut 0.5s forwards;
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
 
 .swiper-container {
     width: 100%;
